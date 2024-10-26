@@ -33,13 +33,14 @@ const winningCombinations = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-
+// funcion para iniciar el tiempo 
 function startTimer() {
   timerInterval = setInterval(() => {
     timeElapsed++;
-    document.getElementById('timer').textContent = 'Tiempo: ${timeElapsed} segundos';
+    document.getElementById('timer').textContent = `Tiempo: ${timeElapsed} segundos`;
   }, 1000);
 }
+
 
 function stopTimer() {
   clearInterval(timerInterval);
@@ -69,7 +70,7 @@ function handleClick(e) {
   cell.textContent = currentPlayer;
 
   if (checkWin(currentPlayer)) {
-    statusMessage.textContent = '¡Jugador ${currentPlayer} ha ganado!';
+    statusMessage.textContent = `¡Jugador ${currentPlayer} ha ganado!`;
 
     // Incrementar el contador de victorias
     if (currentPlayer === 'X') {
@@ -87,13 +88,13 @@ function handleClick(e) {
     
     // Incrementar el contador de empates
     draws++;
-    document.getElementById('draws').textContent = 'Empates: ${draws}';
+    document.getElementById('draws').textContent = `Empates: ${draws}`;
 
     gameActive = false;
     stopTimer();
   } else {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    statusMessage.textContent = 'Turno del Jugador ${currentPlayer}';
+    statusMessage.textContent = `Turno del Jugador ${currentPlayer}`;
   }
 }
 
@@ -107,14 +108,14 @@ function restartGame() {
   board.fill(null);
   gameActive = true;
   currentPlayer = 'X';
-  statusMessage.textContent = 'Turno del Jugador ${currentPlayer}';
+  statusMessage.textContent = `Turno del Jugador ${currentPlayer}`;
   cells.forEach(cell => (cell.textContent = ''));
   resetTimer(); // Reinicia el cronómetro al reiniciar el juego
 }
 
 cells.forEach(cell => cell.addEventListener('click', handleClick));
 restartButton.addEventListener('click', restartGame);
-statusMessage.textContent = 'Turno del Jugador ${currentPlayer}';
+statusMessage.textContent = `Turno del Jugador ${currentPlayer}`;
 
 function initializeMusicControls() {
   const playPauseBtn = document.getElementById('play-pause-btn');
@@ -125,7 +126,7 @@ function initializeMusicControls() {
   playPauseBtn.addEventListener('click', () => {
     if (backgroundMusic.paused) {
       backgroundMusic.play();
-      playPauseBtn.textContent = '⏸'; // Cambia el ícono a pausa
+      playPauseBtn.textContent = '⏸️'; // Cambia el ícono a pausa
     } else {
       backgroundMusic.pause();
       playPauseBtn.textContent = '🎵'; // Cambia el ícono de nuevo a música
