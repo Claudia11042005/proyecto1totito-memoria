@@ -1,0 +1,149 @@
+/* Elimina el margen y el relleno predeterminados en todos los elementos, asegurando que el diseño sea consistente en todos los navegadores. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Evita el scroll */
+  position: relative; /* Necesario para el posicionamiento del video */
+}
+
+/* Estilo para el video de fondo */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+  z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+
+.game-container {
+  text-align: center;
+  background-color: rgba(28, 20, 20, 0.8); /* Color de fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #00BFFF; /* Azul brillante */
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 100px); /* Cambiado a 10 columnas */
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: #000000; /* Tarjetas negras */
+  width: 100px;
+  height: 120px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #00BFFF; /* Borde azul */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.flipped img {
+  display: block;
+}
+
+.status-message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #FFD700;
+}
+
+.timer {
+  color: #FFD700;
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.reset-button {
+  margin-top: 5px;
+  padding: 15px 25px;
+  background-color: #00BFFF; /* Botón azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #1e90ff;
+}
+
+/* Estilo para los controles de música */
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#play-pause-btn {
+  background-color: #00BFFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute; /* Para permitir posicionarlo en cualquier parte */
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+}
+
+#play-pause-btn:hover {
+  background-color: #1e90ff;
+}
+
+#volume-control {
+  margin-left: 10px;
+  width: 150px;
+  position: absolute; /* Para permitir posicionarlo en cualquier parte */
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+  opacity: 0;
+}
+
+.exit-button {
+  position: absolute;
+  top: 10px;   /* Ajusta según lo necesario */
+  right: 10px; /* Ajusta según lo necesario */
+  padding: 10px 20px;
+  background-color: #348dbd; /* Color rojo anaranjado para que destaque */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #895298; /* Un color más claro al pasar el ratón */
+}

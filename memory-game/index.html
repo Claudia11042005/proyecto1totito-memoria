@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <!--Asegura que la página web sea adaptable a diferentes tamaños de pantalla, especialmente para dispositivos móviles.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Memory Game - Herramientas Informáticas</title>
+  <!--Enlaza el archivo de estilo CSS para darle formato visual a la página.-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video de fondo -->
+<video autoplay muted loop id="background-video">
+  <source src="Video/video1.mp4" type="video/mp4">
+</video>
+
+  <div class="game-container">
+    <h1>Juego de Memoria: Herramientas Informáticas</h1>
+
+    <!-- Botón para salir del juego -->
+    <button id="exit-button" class="exit-button">Salir</button>
+
+    <div id="game-board" class="game-board"></div>
+    <!-- Un área para mostrar mensajes como "¡Correcto!" o "¡Se acabó el tiempo!".-->
+    <div id="status-message" class="status-message"></div>
+    <button id="reset-button" class="reset-button">Reiniciar Juego</button>
+    
+    <!-- Controles de música -->
+    <div class="music-controls">
+      <button id="play-pause-btn">🔊</button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- Música de fondo -->
+    <audio id="background-music" src="audio/Musica1.mp3" loop></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
