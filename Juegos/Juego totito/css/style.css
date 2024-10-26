@@ -1,0 +1,212 @@
+y este el css 
+* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Evita el scroll */
+  position: relative; /* Necesario para el posicionamiento del video */
+}
+
+/* Estilo para el video de fondo */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+  z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+
+.container {
+  text-align: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Añade sombra */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #00BFFF;
+  margin-bottom: 20px;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.cell {
+  background-color: #fff;
+  border: 5px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #00BFFF; 
+  color: #000;
+}
+
+#status-message {
+  margin-top: 20px;
+  color: #00BFFF;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#timer {
+  color: #00BFFF; 
+  font-size: 1.8em; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center;
+  margin-top: 10px;
+  background-color: grey; /* Fondo negro */
+  padding: 10px;
+  border-radius: 5px; /* Bordes redondeados */
+  display: inline-block;
+  margin-bottom: 20px; 
+}
+
+/* Estilo para los controles de música */
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+#play-pause-btn {
+  background-color: #00BFFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute; /* Para permitir posicionarlo en cualquier parte */
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+}
+
+#play-pause-btn:hover {
+  background-color: #1e90ff;
+}
+
+#volume-control {
+  margin-left: 10px;
+  width: 150px;
+  position: absolute; /* Para permitir posicionarlo en cualquier parte */
+  top: 10px; /* Ajusta según sea necesario */
+  left: 10px; /* Ajusta según sea necesario */
+  opacity: 0; 
+}
+
+button:hover {
+  background-color: #218838;
+}
+.exit-button {
+  position: absolute;
+  top: 10px;   /* Ajusta según lo necesario */
+  right: 10px; /* Ajusta según lo necesario */
+  padding: 10px 20px;
+  background-color: #006aff; /* Color rojo anaranjado para que destaque */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #4cd2cc; /* Un color más claro al pasar el ratón */
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Video de fondo */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Contenedor del juego */
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Tabla de contadores */
+.score-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea a la derecha */
+  margin-top: 20px;
+  position: fixed; /* Posición absoluta para colocarla en la esquina */
+  top: 0; /* Posición en la parte superior */
+  right: 10%; /* Posición en el borde derecho */
+  padding: 10px;
+}
+
+.score-table {
+  background-color: #000;
+  border-collapse: collapse;
+  color: white;
+  font-family: Arial, sans-serif;
+  width: 80%;
+  max-width: 400px;
+}
+
+.score-table th,
+.score-table td {
+  border: 1px solid #4CAF50;
+  padding: 10px;
+  text-align: center;
+}
+
+.score-table th {
+  background-color: #1c1c1c;
+}
+
+.score-count {
+  font-size: 24px;
+  font-weight: bold;
+}

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Para evitar barras de desplazamiento si el video es más grande que la pantalla */
+}
+
+/* Estilo para el video de fondo */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.title {
+    color: #00CED1; /* Color turquesa */
+    font-size: 42px;
+    text-shadow: 3px 3px #000;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.authors {
+    color: #FFD700; /* Color dorado */
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.motivational {
+    color: #00CED1; /* Turquesa */
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 15px 0;
+}
+
+.button {
+    display: inline-block;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #1E90FF; /* Azul atractivo */
+    border-radius: 10px;
+    text-shadow: 2px 2px #000;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+    background-color: #32CD32; /* Verde motivador al pasar el cursor */
+    transform: scale(1.1); /* Agrandamiento */
+    box-shadow: 0px 0px 15px #32CD32; /* Sombra luminosa verde */
+}
+
+.button:active {
+    transform: scale(1); /* Vuelve a su tamaño original al hacer clic */
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #000; /* Fondo negro para destacar el efecto */
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Título y subtítulo */
+.title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.authors, .motivational {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #005f7f;
+}
+
+/* Contenedor de estrellas */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.stars::before, .stars::after {
+  content: '★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';
+  position: absolute;
+  font-size: 16px; /* Tamaño de las estrellas */
+  color: rgba(255, 255, 255, 0.6); /* Color de las estrellas */
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  animation: animateStars 8s linear infinite;
+}
+
+.stars::after {
+  content: '★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';
+  top: -70%;
+  left: -30%;
+  font-size: 12px; /* Tamaño más pequeño para variar */
+  animation-duration: 12s;
+  opacity: 0.8;
+}
+
+/* Animación para las estrellas */
+@keyframes animateStars {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(50%) rotate(360deg);
+  }
+}
+
+/* Video de fondo */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Coloca el video detrás del contenido */
+}

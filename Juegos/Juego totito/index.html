@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Juego-Totito</title>
+</head>
+<body>
+
+   <!-- Video de fondo -->
+<video autoplay muted loop id="background-video">
+  <source src="Video/video4.mp4" type="video/mp4">
+</video>
+
+  <div class="music"></div>
+      <button id="play-pause-btn">🔊</button>
+      <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- Música de fondo -->
+    <audio id="background-music" src="Audio/Musica1.mp3" loop></audio>
+  <div class="container">
+    <h1>Juego de Totito</h1>
+    <div id="timer">Tiempo: 0 s</div>
+    <div id="game-board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+
+    <h2 id="status-message"></h2>
+    <button id="restartButton">Reiniciar Juego</button>
+     
+    <!-- Botón para salir del juego -->
+    <button id="salir" class="exit-button">Salir</button>
+
+  </div>
+
+  <div class="score-container">
+    <table class="score-table">
+      <tr>
+        <th>Victorias de X</th>
+        <th>Victorias de O</th>
+        <th>Empates</th>
+      </tr>
+      <tr>
+        <td id="x-wins" class="score-count">0</td>
+        <td id="o-wins" class="score-count">0</td>
+        <td id="draws" class="score-count">0</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="javascript/funcion.js"></script>
+</body>
+</html>
